@@ -1,4 +1,4 @@
-function [t,x] = meulermej(f,intervalo,x0,N)
+function [t,x] = improved_euler(f,intervalo,x0,N)
 h=(intervalo(2)-intervalo(1))/N;
 t=intervalo(1):h:intervalo(2); 
 x(:,1) = x0(:);
@@ -12,4 +12,5 @@ end
 i = N;
 x(:,i+1)=x(:,i)+h*0.5*(y(:,1)+y(:,2));
 t=t(:);  
+
 x=x.'; 
