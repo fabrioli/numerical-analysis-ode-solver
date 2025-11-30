@@ -1,4 +1,4 @@
-function [t,x] = mrk4(f, intervalo, x0, N)
+function [t,x] = runge_kutta_4(f, intervalo, x0, N)
 h = (intervalo(2)-intervalo(1))/N;
 t = intervalo(1) : h :intervalo(2);
 x(:,1)=x0(:);
