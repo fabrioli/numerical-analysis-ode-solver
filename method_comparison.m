@@ -1,5 +1,5 @@
-function comp2met(met1,met2)
-datos
+function method_comparison(met1,met2)
+problem_config
 [t,x1]=met1(f,intervalo,x0,N);
 [~,x2]=met2(f,intervalo,x0,N);
 colx=size(x1,2);
@@ -34,4 +34,5 @@ if colx>1
         plot3(x2(:,1),x2(:,2),x2(:,3),'r')
     end
     title('Trayectoria de las soluciones')
+
 end
