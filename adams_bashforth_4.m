@@ -1,4 +1,4 @@
-function [t,x] = mab4(f,intervalo,x0,N)
+function [t,x] = adams_bashforth_4(f,intervalo,x0,N)
 h=(intervalo(2)-intervalo(1))/N;
 t=intervalo(1):h:intervalo(2);
 [~,x] = mrk3(f,[t(1),t(4)],x0,3);
@@ -14,4 +14,5 @@ for i = 1 : (N-3)
     y(:,4) = f(t(i+4), x(:,i+4));
 end
 t=t(:);  
+
 x=x.';
