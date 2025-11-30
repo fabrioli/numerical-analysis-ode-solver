@@ -1,4 +1,4 @@
-function comp2ode45(met1)
+function benchmark_vs_ode45(met1)
 datos
 [t,x1]=met1(f,intervalo,x0,N);
 [~,x2]=ode45(f,intervalo(1):(intervalo(2)-intervalo(1))/N:intervalo(2),x0);
@@ -34,4 +34,5 @@ if colx>1
         plot3(x2(:,1),x2(:,2),x2(:,3),'r')
     end
     title('Trayectoria de las soluciones')
+
 end
